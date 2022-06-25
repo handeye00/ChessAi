@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="chessboardjs-1.0.0\css\chessboard-1.0.0.css">
+        <link rel="stylesheet" href="chess.css">
+        <script src="node_modules\jquery\dist\jquery.min.js"></script>
+        <script src="node_modules\chess.js\chess.js"></script>
+        <script src="chessboardjs-1.0.0\js\chessboard-1.0.0.js"></script>
+    </head>
+
+    <body>
+
+    <table>
+        <tr>
+            <td>
+                <div id="myBoard" style="width: 600px; height: 600px;"></div>
+            </td>
+            <td>
+
+                <div style="margin-left: 100px">
+                    <div id="game_info" style="display: none;">
+                        <br>
+                        <h2>Stato di gioco:</h2>
+
+                        <label id="selected_algorithm">Algoritmo selezionato:</label>
+                        <br>
+                        <label id="selected_depth">Difficoltà selezionata:</label>
+
+                        <br><br>
+                        <label id="player_color"></label>
+                        <br>
+                        <label id="computer_color"></label>
+                        <br>
+                        <label id="computer_timer"></label>
+                        <br>
+                        <label id="computer_analyzed_moves"></label>
+
+                        <br><br>
+                        <label id="status">Turno:</label>
+                    </div>
+                    
+                    <br><br>
+                    <h2>Nuova partita:</h2>
+
+                    <label>Seleziona turno di inizio:</label>
+                    <br>
+                    <button  type = "submit" id="black_king">
+                        <img style="width:50px" src="info_images\black_king.png" />
+                    </button>
+                    
+                    <button  type = "submit" id="white_king">
+                        <img style="width:50px" src="info_images\white_king.png" />
+                    </button>
+
+                    <br>
+                    <label id="selected_king">Hai selezionato: </label>
+
+                    <br><br>
+                    <label>Seleziona algoritmo:</label>
+                    <select id="algorithm_selector">
+                        <option value="min-max" selected>min-max</option>
+                        <option value="alpha-beta">alpha-beta</option>
+                    </select>
+
+                    <br><br>
+                    <label>Seleziona livello:</label>
+                    <select id="depth">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3" selected>3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+
+
+                    <br><br>
+                    <button id="reset_game" type="button" style="width:150px; height:30px">Avvia partita</button>
+                <div>
+            </td>
+        </tr>
+    </table>
+
+    </body>
+
+    <script src="chess.js">
+    </script>
+
+</html>
+
+
+
+    
